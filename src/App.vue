@@ -26,7 +26,6 @@ export default {
     ])
   },
   mounted() {
-    this.id = localStorage.getItem('id');
     if(localStorage.getItem('id') && localStorage.getItem('id') > 0) {
       this.$store.dispatch('getUserMe', localStorage.getItem('id'))
           .then(data => {
